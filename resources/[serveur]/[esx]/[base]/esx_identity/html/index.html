@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/master_style.css">
+    </head>
+    <body >
+        <img id="cursor" src="cursor.png">
+        <div class="dialog">
+        <div class="auth-2">
+          </div>
+          <div class="auth-body">
+            <center>
+        <img src="https://cdn.discordapp.com/attachments/790477067740643349/796215090323521546/ARP_GLOW.png" height="130px" width="350px">
+<br>
+<font size="2px" color="red"><i>Prenez votre temps lors de la création de votre personnage.</i></font><br>
+<p class="auth-msg" style="margin-bottom:0px;">Créez votre visa.</p>
+<form id="register">
+<b>Prénom :</b><br><input id="firstname"  class="form-control" type="text" placeholder="Prénom"><br><br>
+<b>Nom :</b><br><input id="lastname" type="text" class="form-control" placeholder="Nom de famille"><br><br>
+<b>Date de naissance :</b><br><input id="dateofbirth" type="text" class="form-control unstyled" placeholder="Date de naissance" maxlength="10" oninput="maxLengthCheck(this)"><br><br>
+<b>Taille:</b><br><input id="height" type="number" min="0" step="1" min="125" max="200" maxlength = "3" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" class="form-control" placeholder="Taille (125-200 cm)" ><br><br>
+<b>Lore de ton personnage:</b><br><input id="backstory" type="text" class="form-control" placeholder="Lore de ton personnage (facultatif)" maxlength="9999"><br><br>
+  <div class="checkbox">
+    <input type="checkbox" id="sex1" class="sex"  value="M">
+    <label for="sex1">Homme</label> &nbsp;&nbsp;&nbsp;
+    <input type="checkbox" id="sex2" class="sex" value="F">
+    <label for="sex2">Femme</label>
+  </div> 
+	<br><br>
+<button id="submit" type="submit">Créer son personnage</button>
+ <form>
+            </center>
+            <center><h1>Rejoignez notre Discord !</h1></center>
+            <div class="discordbox">
+                 <center>https://discord.gg/MtaABx5Fmj</center>
+</div>
+<center>
+                 <font size="1px">Bon jeu sur AlzheRP</font>
+             </center>
+      </div>
+        </div>
+          <script src="new/js/jquery-3.3.1.js" type="text/javascript"></script>
+        <script src="script.js" type="text/javascript"></script>
+        <script>
+          $('input[type="checkbox"]').on('change', function() {
+          $('input[type="checkbox"]').not(this).prop('checked', false);
+          });
+          function maxLengthCheck(object) {
+                  if (object.value.length > object.maxLength)
+                    object.value = object.value.slice(0, object.maxLength)
+                }
+                  
+                function isNumeric (evt) {
+                  var theEvent = evt || window.event;
+                  var key = theEvent.keyCode || theEvent.which;
+                  key = String.fromCharCode (key);
+                  var regex = /[0-9]|\./;
+                  if ( !regex.test(key) ) {
+                    theEvent.returnValue = false;
+                    if(theEvent.preventDefault) theEvent.preventDefault();
+                  }
+                }
+
+                dateInput.addEventListener('keydown', function(event) {
+                    if (event.keyIdentifier == "Down") {
+                        event.preventDefault()
+                    }
+                }, false);
+        </script>
+    </body>
+</html>

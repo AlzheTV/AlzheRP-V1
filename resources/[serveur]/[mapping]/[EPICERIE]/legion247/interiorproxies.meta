@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SInteriorOrderData>
+  <startFrom value="7000" />
+  <filePathHash value="0" />
+  <proxies>
+    <!--Item>v_pizza_mp_placement</Item-->
+    <Item>hei_dt1_rd1_strm_6</Item>
+    <Item>shop247_mlo</Item>
+  </proxies>
+</SInteriorOrderData>
